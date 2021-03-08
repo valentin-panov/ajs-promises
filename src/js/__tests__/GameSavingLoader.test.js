@@ -1,7 +1,7 @@
 import GameSavingLoader from '../GameSavingLoader';
 import GameSaving from '../GameSaving';
 
-test('gameSavingLoader should return data', async () => {
+test('GameSavingLoader should return data', async () => {
   const response = await GameSavingLoader.load();
   const received = new GameSaving(response);
   const expected = {

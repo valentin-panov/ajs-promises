@@ -1,10 +1,10 @@
 import GameSavingLoader from './GameSavingLoader';
 import GameSaving from './GameSaving';
 
-const gameSavingLoader = new GameSavingLoader();
-export default gameSavingLoader
-  .load()
+const result = GameSavingLoader.load()
   .then((saving) => new GameSaving(saving))
   .catch((error) => {
     throw new Error(error.message);
   });
+
+export default result;
